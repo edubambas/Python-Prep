@@ -47,6 +47,12 @@ print(lista1.index("La Plata"))  #sólo me entrega el índice de la primera coin
 
 #print(lista1.index("Caracas"))    ValueError: 'Caracas' is not in list
 
+###una manera de buscar sin que tire error puede ser:
+# if ("Caracas" in lista1):
+#   print(lista1.index("Caracas"))
+
+#y así no tira error si no está en la lista
+
 #12) Eliminar un elemento de la lista
 
 lista1.remove("La Plata")
@@ -55,6 +61,12 @@ print(lista1) #nuevamente recorre la lista desde el índice 0 y sólo remueve el
 #13) ¿Qué pasa si el elemento a eliminar no existe?
 
 #lista1.remove("Río")    ValueError: list.remove(x): x not in list
+
+###del mismo modo se podría hacer:
+# if("Río" in lista1):
+#   lista1.remove("Río")
+
+#y así no tira error si no está en la lista
 
 #14) Extraer el úlimo elemento de la lista, guardarlo en una variable e imprimirlo
 
@@ -179,6 +191,9 @@ print(tup)
 print(listan)
 
 #22) Desempaquetar solo los primeros 3 elementos de la tupla en 3 variables
+
+v1,v2,v3 = tup[:3] #porque sino sigue recorriendo el resto de la tupla, en donde no asigné valores y da error
+print(v1, v2, v3)
 
 #23) Crear un diccionario utilizando la lista crada en el punto 1, asignandole la clave "ciudad". Agregar tambien otras claves, como puede ser "Pais" y "Continente".
 p=["Argentina","Chile","Brasil","Perú"]
